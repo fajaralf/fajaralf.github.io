@@ -1,0 +1,121 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #efe5df;
+$text-primary: #191a6d;
+$enable-cssgrid: true;
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/images";
+
+@import "../node_modules/bootstrap/scss/utilities";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+@import "../node_modules/bootstrap/scss/helpers";
+
+@import "../node_modules/bootstrap/scss/modal";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $primary;
+  color: $text-primary;
+  letter-spacing: 0.05rem;
+}
+
+.navbar {
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  background-color: $primary;
+  a.navbar-brand {
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 20%;
+    padding: 0.3rem 1.2rem;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: $text-primary;
+      align-self: center;
+      font-weight: 300;
+    }
+    .icon:hover {
+      transform: scale(1.2);
+    }
+    .menu {
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.hero {
+  padding-top: 7rem;
+}
+
+.list-porto {
+  border: none;
+  justify-content: center;
+  column-gap: 1rem;
+  li {
+    button {
+      color: $text-primary;
+    }
+  }
+}
+
+.navcolor {
+  background-color: white;
+}
+
+@include media-breakpoint-down(lg) {
+  .hero {
+    padding-top: 5rem;
+  }
+  .navbar {
+    padding: 1rem;
+    .navbar-nav {
+      a.nav-link {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .navbar {
+    padding: 1rem;
+    font-size: 1.5rem;
+    a.navbar-brand {
+      font-size: 1.5rem;
+    }
+    .navbar-nav {
+      a.nav-link {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
